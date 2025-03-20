@@ -10,10 +10,11 @@ def index():
 
 @app.route('/add', methods=['POST'])
 def add_task():
-    task = request.form.get('task')
-    if task:
-        tasks.append(task)  # Add task to list
+    task = request.form.get('task').strip()  # Remove extra spaces
+    if task:  # Only add if task is not empty
+        tasks.append(task)
     return redirect('/')
+
 
 @app.route('/delete/<int:task_index>', methods=['POST'])
 def delete_task(task_index):

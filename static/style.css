@@ -106,3 +106,26 @@ body {
     background-repeat: no-repeat;  /* Prevent repeating */
     font-family: Arial, sans-serif;
 }
+
+.done-btn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.done-btn:hover {
+    background: #e68900;
+}
+
+li {
+    transition: opacity 0.3s ease-out;
+}
+
+li.removed {
+    opacity: 0;
+    transform: scale(0.9);
+}
